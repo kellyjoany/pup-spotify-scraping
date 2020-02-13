@@ -32,7 +32,7 @@ Aguarde alguns instantes. Para visualizar deve-se realizar o POST na rota 'http:
 
 5 - Testes:
 
-Este estudo apenas o teste de integração para as rota GET. Para visualizar o teste basta executar o comando:
+Este estudo comtempla apenas o teste de integração para as rota GET. Para visualizar o teste basta executar o comando:
 
 ```
 yarn test
