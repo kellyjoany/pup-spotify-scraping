@@ -28,11 +28,11 @@ yarn install
 nodemon src/server.js
 ```
 
-Aguarde alguns instantes. Para visualizar deve-se realizar o POST na rota '/log' para realizar a raspagem de dados. Já para visualizar os dados coletados deve-se realizar o GET na rota '/log'
+Aguarde alguns instantes. Para visualizar deve-se realizar o POST na rota 'http://localhost:3333/log' para realizar a raspagem de dados. Já para visualizar os dados coletados deve-se realizar o GET na rota 'http://localhost:3333/log'
 
 5 - Testes:
 
-Para este estudo foram criados testes de integração para as rotas GET e POST. Para visualizar os testes basta executar o comando:
+Este estudo apenas o teste de integração para as rota GET. Para visualizar o teste basta executar o comando:
 
 ```
 yarn test
@@ -40,6 +40,6 @@ yarn test
 
 ## :warning: Atenção
 
-Neste código não foram adicionados testes voltados para as funcionalidades do Pumpeteer, logo, para usos gerais e/ou fora do contexto de estudo, é ideal adicionar estes testes.
+Neste código não foram adicionados testes voltados para as funcionalidades do Pumpeteer e da rota POST, logo, para usos gerais e/ou fora do contexto de estudo, é ideal adicionar estes testes tratando os devidos Asyncs.
 
 Observe ainda que este tipo de código possui caracteristicas fortemente bloqueantes, ou seja, seu fluxo quebra os principios de Non-Blocking I/O do Node.
