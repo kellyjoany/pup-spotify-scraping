@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">27.78% </span>
+                <span class="strong">14.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/54</span>
+                <span class='fraction'>8/54</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">14.29% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>1/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.53% </span>
+                <span class="strong">9.8% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/51</span>
+                <span class='fraction'>5/51</span>
             </div>
         
             
@@ -188,21 +188,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -298,20 +298,20 @@ import log from '../models/Log.json';
 require('dotenv/config');
 &nbsp;
 class PuppeteerController {
-  async getTest() {
+<span class="fstat-no" title="function not covered" >  as</span>ync getTest() {
     const {
       USERNAME,
       PASSWORD,
       MAIN_URL,
       URL_LOGIN,
       BACKGROUND_NAVIGATION,
-    } = process.env;
+    } = <span class="cstat-no" title="statement not covered" >process.env;</span>
 &nbsp;
-    const browser = await puppeteer.launch({ headless: BACKGROUND_NAVIGATION });
-    const page = await browser.newPage();
-    try {
-      await page.goto(`${MAIN_URL}`);
-      const info = await page.evaluate(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+    const browser = <span class="cstat-no" title="statement not covered" >await puppeteer.launch({ headless: BACKGROUND_NAVIGATION });</span>
+    const page = <span class="cstat-no" title="statement not covered" >await browser.newPage();</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      await page.goto(`${MAIN_URL}`);</span>
+      const info = <span class="cstat-no" title="statement not covered" >await page.evaluate(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
           title: document.title,
         };
@@ -319,13 +319,13 @@ class PuppeteerController {
 <span class="cstat-no" title="statement not covered" >      console.log(info);</span>
 <span class="cstat-no" title="statement not covered" >      log.push('1 - Browser opened and went to the main page');</span>
     } catch (e) {
-      return e;
+<span class="cstat-no" title="statement not covered" >      return e;</span>
     }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
 <span class="cstat-no" title="statement not covered" >      await page.goto(`${URL_LOGIN}`);</span>
 <span class="cstat-no" title="statement not covered" >      await page.pdf({</span>
-        path: 'spotify_logar.pdf',
+        path: 'spotify_login.pdf',
         format: 'A4',
       });
 <span class="cstat-no" title="statement not covered" >      log.push('2 - Browser redirect to login page and printed the page');</span>
@@ -341,7 +341,7 @@ class PuppeteerController {
         page.click('#login-button'),
       ]);
 <span class="cstat-no" title="statement not covered" >      await page.pdf({</span>
-        path: 'spotify_logado.pdf',
+        path: 'spotify_logged.pdf',
         format: 'A4',
       });
 <span class="cstat-no" title="statement not covered" >      log.push(</span>
@@ -354,7 +354,7 @@ class PuppeteerController {
 <span class="cstat-no" title="statement not covered" >    try {</span>
 <span class="cstat-no" title="statement not covered" >      await page.goto(`${MAIN_URL}/account/subscription/receipt/`);</span>
 <span class="cstat-no" title="statement not covered" >      await page.pdf({</span>
-        path: 'spotify_recibo.pdf',
+        path: 'spotify_receipts.pdf',
         format: 'A4',
       });
 <span class="cstat-no" title="statement not covered" >      log.push(</span>
@@ -415,7 +415,7 @@ export default new PuppeteerController();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Feb 13 2020 15:30:38 GMT-0200 (GMT-02:00)
+                at Thu Feb 13 2020 16:55:29 GMT-0200 (GMT-02:00)
             </div>
         </div>
         <script src="prettify.js"></script>
