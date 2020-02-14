@@ -43,3 +43,9 @@ yarn test
 Neste código não foram adicionados testes voltados para as funcionalidades do Pumpeteer e da rota POST, logo, para usos gerais e/ou fora do contexto de estudo, é ideal adicionar estes testes tratando os devidos Asyncs.
 
 Observe ainda que este tipo de código possui caracteristicas fortemente bloqueantes, ou seja, seu fluxo quebra os principios de Non-Blocking I/O do Node.
+
+PS: Caso utilize o terminal ZSH é necessário realizar a instalação do nodemon de maneira global. 
+
+```
+yarn global add nodemon
+```
